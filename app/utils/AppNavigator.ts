@@ -4,10 +4,13 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
-const AppNavigator = () => {
+const AppNavigator = ({children} : {children : React.ReactNode}) => {
   return (
     <NavigationContainer>
-      <Stack.Navigator>{/* ... */}</Stack.Navigator>
+      <Stack.Navigator>
+      {children}
+      
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
